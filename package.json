@@ -1,0 +1,22 @@
+{
+  "name": "basiccalc",
+  "version": "1.0.0",
+  "description": "An app with basic calculator features as an API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buffginger/basiccalc.git"
+  },
+  "author": "Ethan Anderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buffginger/basiccalc/issues"
+  },
+  "homepage": "https://github.com/buffginger/basiccalc#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
