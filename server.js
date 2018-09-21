@@ -70,17 +70,25 @@ app.get('/divide/:number1/:number2', (req, res) => {
 	var num2 = parseFloat(req.params.number2);
 	// Verify integer values
 	if (!isNaN(num1) && !isNaN(num2)) {
-		var quotient = num1 / num2;
-		var result = `${num1} / ${num2} = ${quotient}`
-		// Output result to the terminal and browser
-		console.log(result);
-		res.send(result)
-
+		// Divide by zero
+		if (num2 === 0) {
+			result = 'Divide by 0?! Are you trying to break the Universe?? Have some respect!';
+			console.log(result);
+			res.send(result);
+			res.end;
+		} else {
+			var quotient = num1 / num2;
+			var result = `${num1} / ${num2} = ${quotient}`
+			// Output result to the terminal and browser
+			console.log(result);
+			res.send(result)
+		}
 	} else {
 		console.log(nan);
 		res.send(nan);
 	}
 })
+
 var server = app.listen(8081, function () {
 
   var host = server.address().address
